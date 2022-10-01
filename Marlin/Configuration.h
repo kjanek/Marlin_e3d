@@ -32,6 +32,7 @@
 //  1.7 - enable host action commands for octoprint
 //  1.8 - change Serial Port Number so that the UART can work
 //  1.9 - set print bed size and minimal and maximal positions
+//  2.0 - enable manual corner bed leveling
 
 /**
  * Configuration.h
@@ -2044,7 +2045,8 @@
  * Add a bed leveling sub-menu for ABL or MBL.
  * Include a guided procedure if manual probing is enabled.
  */
-//#define LCD_BED_LEVELING
+// change 2.0
+#define LCD_BED_LEVELING
 
 #if ENABLED(LCD_BED_LEVELING)
   #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
@@ -2053,7 +2055,8 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
-//#define LCD_BED_TRAMMING
+// change 2.0
+#define LCD_BED_TRAMMING
 
 #if ENABLED(LCD_BED_TRAMMING)
   #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
