@@ -2015,7 +2015,8 @@
  *
  * Warning: Does not respect endstops!
  */
-//#define BABYSTEPPING
+// change 2.1
+#define BABYSTEPPING
 #if ENABLED(BABYSTEPPING)
   //#define INTEGRATED_BABYSTEPPING         // EXPERIMENTAL integration of babystepping into the Stepper ISR
   //#define BABYSTEP_WITHOUT_HOMING
@@ -2122,10 +2123,14 @@
  * the probe to be unable to reach any points.
  */
 #if PROBE_SELECTED && !IS_KINEMATIC
-  //#define PROBING_MARGIN_LEFT PROBING_MARGIN
-  //#define PROBING_MARGIN_RIGHT PROBING_MARGIN
-  //#define PROBING_MARGIN_FRONT PROBING_MARGIN
-  //#define PROBING_MARGIN_BACK PROBING_MARGIN
+  // change 2.1
+  #define PROBING_MARGIN_LEFT PROBING_MARGIN
+  // change 2.1
+  #define PROBING_MARGIN_RIGHT PROBING_MARGIN
+  // change 2.1
+  #define PROBING_MARGIN_FRONT PROBING_MARGIN
+  // change 2.1
+  #define PROBING_MARGIN_BACK PROBING_MARGIN
 #endif
 
 #if EITHER(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
