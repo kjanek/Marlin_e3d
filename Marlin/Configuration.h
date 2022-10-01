@@ -26,6 +26,7 @@
 //  1.1 - change stepper motor controller and invert there directions
 //  1.2 - enable termistors
 //  1.3 - invert endstops
+//  1.4 - enable eeproom, print status and sd_card
 
 /**
  * Configuration.h
@@ -2190,7 +2191,8 @@
  *   M501 - Read settings from EEPROM. (i.e., Throw away unsaved changes)
  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
  */
-//#define EEPROM_SETTINGS     // Persistent storage with M500 and M501
+// change 1.4
+#define EEPROM_SETTINGS     // Persistent storage with M500 and M501
 //#define DISABLE_M503        // Saves ~2700 bytes of flash. Disable for release!
 #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save PROGMEM.
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
@@ -2382,7 +2384,8 @@
  *
  * View the current statistics with M78.
  */
-//#define PRINTCOUNTER
+// change 1.4
+#define PRINTCOUNTER
 #if ENABLED(PRINTCOUNTER)
   #define PRINTCOUNTER_SAVE_INTERVAL 60 // (minutes) EEPROM save interval during print. A value of 0 will save stats at end of print.
 #endif
@@ -2475,7 +2478,8 @@
  * SD Card support is disabled by default. If your controller has an SD slot,
  * you must uncomment the following option or it won't work.
  */
-//#define SDSUPPORT
+// change 1.4
+#define SDSUPPORT
 
 /**
  * SD CARD: ENABLE CRC
