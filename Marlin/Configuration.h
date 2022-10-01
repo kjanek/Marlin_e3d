@@ -40,7 +40,7 @@
 //  2.5 - change TMC drivers current and microsteps
 //  2.6 - change steps per unit to values for 64 microsteps
 //  2.7 - enable firmware retraction
-
+//  2.8 - faster bed mesh
 /**
  * Configuration.h
  *
@@ -1207,7 +1207,8 @@
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
 // change 2.2
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 50 }
+// change 2.8
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 20, 50 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1529,10 +1530,12 @@
 #define PROBING_MARGIN 25
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_FEEDRATE (133*60)
+// change 2.8
+#define XY_PROBE_FEEDRATE (150*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (4*60)
+// change 2.8
+#define Z_PROBE_FEEDRATE_FAST (10*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
@@ -1600,7 +1603,8 @@
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
 #define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
+// change 2.8
+#define Z_CLEARANCE_BETWEEN_PROBES  3 // Z Clearance between probe points
 #define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
@@ -2150,7 +2154,8 @@
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
-#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
+// change 2.8
+#define HOMING_FEEDRATE_MM_M { (100*60), (100*60), (10*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
