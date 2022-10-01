@@ -21,6 +21,9 @@
  */
 #pragma once
 
+// Changes made:
+//  1.0 - change motherboard, serial, and baudrate
+
 /**
  * Configuration.h
  *
@@ -87,7 +90,8 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+// change 1.0
+  #define MOTHERBOARD BOARD_MKS_ROBIN_E3D_V1_1
 #endif
 
 /**
@@ -98,6 +102,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
+// change 1.0
 #define SERIAL_PORT 0
 
 /**
@@ -111,7 +116,8 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 250000
+// change 1.0
+#define BAUDRATE 115200
 
 //#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
 
