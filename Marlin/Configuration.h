@@ -34,6 +34,7 @@
 //  1.9 - set print bed size and minimal and maximal positions
 //  2.0 - enable manual corner bed leveling
 //  2.1 - set BLTouch, offset and other configs
+//  2.2 - change max speed, acceleration, junction dev and max feedrate
 
 /**
  * Configuration.h
@@ -1199,7 +1200,8 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+// change 2.2
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 50 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1212,11 +1214,14 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }
+// change 2.2
+#define DEFAULT_MAX_ACCELERATION      { 5000, 5000, 100, 10000 }
 
-//#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
+// change 2.2
+#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
-  #define MAX_ACCEL_EDIT_VALUES       { 6000, 6000, 200, 20000 } // ...or, set your own edit limits
+  // change 2.2
+  #define MAX_ACCEL_EDIT_VALUES       { 10000, 10000, 200, 20000 } // ...or, set your own edit limits
 #endif
 
 /**
