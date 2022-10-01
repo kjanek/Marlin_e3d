@@ -39,6 +39,7 @@
 //  2.4 - enable TMC debug
 //  2.5 - change TMC drivers current and microsteps
 //  2.6 - change steps per unit to values for 64 microsteps
+//  2.7 - enable firmware retraction
 
 /**
  * Configuration.h
