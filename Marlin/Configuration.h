@@ -24,6 +24,7 @@
 // Changes made:
 //  1.0 - change motherboard, serial, and baudrate
 //  1.1 - change stepper motor controller and invert there directions
+//  1.2 - enable termistors
 
 /**
  * Configuration.h
@@ -547,7 +548,8 @@
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
-#define TEMP_SENSOR_0 1
+// change 1.2
+#define TEMP_SENSOR_0 13
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -555,7 +557,8 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 0
+// change 1.2
+#define TEMP_SENSOR_BED 1
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 #define TEMP_SENSOR_COOLER 0
