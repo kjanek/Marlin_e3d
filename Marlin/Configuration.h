@@ -37,6 +37,8 @@
 //  2.2 - change max speed, acceleration, junction dev and max feedrate
 //  2.3 - enable linear advance
 //  2.4 - enable TMC debug
+//  2.5 - change TMC drivers current and microsteps
+//  2.6 - change steps per unit to values for 64 microsteps
 
 /**
  * Configuration.h
@@ -1195,7 +1197,8 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 500 }
+// change 2.6
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 321, 321, 1615, 1620 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
