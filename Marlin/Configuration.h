@@ -31,6 +31,7 @@
 //  1.6 - change LCD language to PL
 //  1.7 - enable host action commands for octoprint
 //  1.8 - change Serial Port Number so that the UART can work
+//  1.9 - set print bed size and minimal and maximal positions
 
 /**
  * Configuration.h
@@ -1718,16 +1719,22 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 200
-#define Y_BED_SIZE 200
+// change 1.9
+#define X_BED_SIZE 220
+// change 1.9
+#define Y_BED_SIZE 216
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
+// change 1.9
+#define X_MIN_POS -27
+// change 1.9
+#define Y_MIN_POS -17
 #define Z_MIN_POS 0
-#define X_MAX_POS X_BED_SIZE
+// change 1.9
+#define X_MAX_POS 250
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 200
+// change 1.9
+#define Z_MAX_POS 220
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
