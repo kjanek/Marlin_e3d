@@ -29,6 +29,7 @@
 //  1.4 - enable eeproom, print status and sd_card
 //  1.5 - enable MKS MINI 12864 screen
 //  1.6 - change LCD language to PL
+//  1.7 - enable host action commands for octoprint 
 
 /**
  * Configuration.h
