@@ -25,6 +25,7 @@
 //  1.0 - change motherboard, serial, and baudrate
 //  1.1 - change stepper motor controller and invert there directions
 //  1.2 - enable termistors
+//  1.3 - invert endstops
 
 /**
  * Configuration.h
@@ -1114,8 +1115,10 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+// change 1.3
+#define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
+// change 1.3
+#define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
