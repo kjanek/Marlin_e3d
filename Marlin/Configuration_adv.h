@@ -3291,7 +3291,8 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continuous reporting.
    */
-  //#define TMC_DEBUG
+  // change 2.4
+  #define TMC_DEBUG
 
   /**
    * You can set your own advanced settings by filling in predefined functions.

@@ -36,6 +36,7 @@
 //  2.1 - set BLTouch, offset and other configs
 //  2.2 - change max speed, acceleration, junction dev and max feedrate
 //  2.3 - enable linear advance
+//  2.4 - enable TMC debug
 
 /**
  * Configuration.h
