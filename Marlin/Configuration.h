@@ -29,7 +29,8 @@
 //  1.4 - enable eeproom, print status and sd_card
 //  1.5 - enable MKS MINI 12864 screen
 //  1.6 - change LCD language to PL
-//  1.7 - enable host action commands for octoprint 
+//  1.7 - enable host action commands for octoprint
+//  1.8 - change Serial Port Number so that the UART can work
 
 /**
  * Configuration.h
@@ -110,7 +111,8 @@
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
 // change 1.0
-#define SERIAL_PORT 0
+// change 1.8
+#define SERIAL_PORT 1
 
 /**
  * Serial Port Baud Rate
