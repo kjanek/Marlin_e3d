@@ -2071,7 +2071,7 @@
   //#define EXTRA_LIN_ADVANCE_K // Add a second linear advance constant, configurable with M900.
   // change 2.3
   // change 2.9
-  #define LIN_ADVANCE_K 0.05   // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K 0.019   // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG            // Print debug information to serial during operation. Disable for production use.
   //#define EXPERIMENTAL_SCURVE // Allow S-Curve Acceleration to be used with LA.
   #define ALLOW_LOW_EJERK     // Allow a DEFAULT_EJERK value of <10. Recommended for direct drive hotends.

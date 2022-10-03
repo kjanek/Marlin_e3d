@@ -42,6 +42,7 @@
 //  2.7 - enable firmware retraction
 //  2.8 - faster bed mesh
 //  2.9 - disable stealthchop for E so it can move, lower Linear Advance to K 0.05, lower acceleration and jerk
+//  3.0 - enable PID Tune for BED and set PID values for HOT END, change Linear Advance to K 0.019
 
 /**
  * Configuration.h
@@ -695,9 +696,12 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp  22.20
-    #define DEFAULT_Ki   1.08
-    #define DEFAULT_Kd 114.00
+    // change 3.0
+    #define DEFAULT_Kp 17.10
+    // change 3.0
+    #define DEFAULT_Ki 1.04
+    // change 3.0
+    #define DEFAULT_Kd 70.11
   #endif
 #endif
 
@@ -762,7 +766,8 @@
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  * @section bed temp
  */
-//#define PIDTEMPBED
+// change 3.0
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
