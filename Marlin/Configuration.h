@@ -43,6 +43,7 @@
 //  2.8 - faster bed mesh
 //  2.9 - disable stealthchop for E so it can move, lower Linear Advance to K 0.05, lower acceleration and jerk
 //  3.0 - enable PID Tune for BED and set PID values for HOT END, change Linear Advance to K 0.019
+//  3.1 - set PID values for HEATED BED
 
 /**
  * Configuration.h
@@ -785,9 +786,12 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  // change 3.1
+  #define DEFAULT_bedKp 126.94
+  // change 3.1
+  #define DEFAULT_bedKi 24.80
+  // change 3.1
+  #define DEFAULT_bedKd 433.25
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
