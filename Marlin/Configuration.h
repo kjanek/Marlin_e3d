@@ -44,6 +44,7 @@
 //  2.9 - disable stealthchop for E so it can move, lower Linear Advance to K 0.05, lower acceleration and jerk
 //  3.0 - enable PID Tune for BED and set PID values for HOT END, change Linear Advance to K 0.019
 //  3.1 - set PID values for HEATED BED
+//  3.2 - PID_FUNCTIONAL_RANGE  from 10 > 3 - should fix the not heating up bed
 
 /**
  * Configuration.h
@@ -844,7 +845,8 @@
 #if ANY(PIDTEMP, PIDTEMPBED, PIDTEMPCHAMBER)
   //#define PID_OPENLOOP          // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
-  #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
+// change 3.2
+  #define PID_FUNCTIONAL_RANGE 3 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)
